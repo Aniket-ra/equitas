@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'Dtab_Neg_EmploybilityList_IB_SLAP')
+#Sat Sep 30 15:39:24 IST 2023
+innovatorItemCreationId=admin
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=Dtab_Neg_EmploybilityList_IB_SLAP
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=9QT6WXAjnW3GC4L7TUlA8IrDikx
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

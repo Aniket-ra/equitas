@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template xmlns='http://www.blazesoft.com/template' name='BlazeRoot'>
+ <ide-name>BlazeRoot</ide-name>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1RaoORulMMLlNlYZXj9utiAR34f' name='SRL Class' id='IxSIgdaT2NpFXyWARsSZqnoWSRW'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <family>Class Template</family>
+ <template:content xmlns:template='http://www.blazesoft.com/template' xmlns='http://www.blazesoft.com/srl' section='srl'><class managementPropertiesRef='IxSIgdaT2NpFXyWARsSZqnoWSRW'>
+   <name>BlazeRoot</name>
+   <type>Application</type>
+   <properties>
+    <property>
+     <name>blazeApplicantArray</name>
+     <array>
+      <type>BlazeApplicant</type>
+     </array>
+    </property>
+    <property>
+     <name>familyIncome</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>isMandatoryIdentityProofDocCheckStatus</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>isMandatoryAgeProofDocCheck</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>isMandatoryResidenceAddressProofDocCheck</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>isMandatoryIncomeDocCheck</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>isEndUseCheck</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>outstandingLoanAmount</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>scorecardCheck</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>deviationCheck</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>eligibilityCheck</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>isOccupationTypeCheck</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>isCollateralSubType</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>clubbedIncome</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>highIncContVsRemFamIncome</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>iir</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>finalLoanAmount</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>hasRentalIncome</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>hasPensionIncome</name>
+     <type>boolean</type>
+    </property>
+    <property>
+     <name>superAnnuationAge</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>tenureInYears</name>
+     <type>real</type>
+    </property>
+    <property>
+     <name>lcr</name>
+     <type>real</type>
+    </property>
+   </properties>
+  </class></template:content>
+</template>

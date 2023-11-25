@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='Q8jH6kHdOYIZ1uG0WKXqvvejqv0' name='Common_Function_MHF_IB_Logics'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='InstanceName'>
+  <value></value>
+ </instance>
+ <instance ref='UniqueInstanceNameVH'>
+  <value>Common_Function1</value>
+ </instance>
+ <instance ref='FunctionNameVH'>
+  <value>Common_Function_MHF_IB_Logics</value>
+ </instance>
+ <instance ref='FunctionReturnType'>
+  <value>void</value>
+ </instance>
+ <instance ref='FunctionBodyVH'>
+  <value><![CDATA[print("");
+print("entering function :: Common function MHF");
+  
+  // for condition 1 ;
+   if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"salaryPaidInCash" and aBlazeApplicant.isDocumentProofCheck=false)then {
+   aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + 0.75*(aBlazeApplicant.incomeDetails.mainIncome); 
+ }
+  
+  //for condition 2 
+  
+  if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"milkBussinessIncome" and aBlazeApplicant.businessVintage >3 and aBlazeApplicant.businessVintage<5)then{
+    aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome+ 0.75*(aBlazeApplicant.incomeDetails.mainIncome);
+  }
+  
+  
+  if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"milkBussinessIncome" and aBlazeApplicant.businessVintage>5 and aBlazeApplicant.isDocumentProofCheck is equal to true)then{
+    aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + aBlazeApplicant.incomeDetails.mainIncome;
+  }
+  
+  
+  // for Condition 3 
+  
+   if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"selfEmployed"and BTCommonVar.application.variantType=EnumVariantType.ASSESSED and aBlazeApplicant.isDocumentProofCheck=true and aBlazeApplicant.businessStability>5)then{
+     aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome+ aBlazeApplicant.incomeDetails.mainIncome;
+    
+   }
+  
+  //for Condition 4
+  
+     if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"selfEmployed"and BTCommonVar.application.variantType=EnumVariantType.ASSESSED and aBlazeApplicant.isDocumentProofCheck=false and aBlazeApplicant.businessStability>5)then{
+     aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + 0.75 * (aBlazeApplicant.incomeDetails.mainIncome);
+    
+   }
+  
+  //condition 5
+  
+    if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"selfEmployed"and BTCommonVar.application.variantType=EnumVariantType.ASSESSED and aBlazeApplicant.isDocumentProofCheck=false and aBlazeApplicant.businessStability>5 and aBlazeApplicant.businessStability<3)then{
+         aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + 0.50 * (aBlazeApplicant.incomeDetails.mainIncome);
+
+   }
+  
+  //condition 6
+  if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"salaried" )then{
+    if(aBlazeApplicant.netIncomeInPaySlip <>unknown and aBlazeApplicant.netIncomeInBankCredit<> unknown )then{
+      if(aBlazeApplicant.netIncomeInPaySlip = aBlazeApplicant.netIncomeInBankCredit)then{
+        if(aBlazeApplicant.averageGrossIncomeInLast3M<> unknown)then{
+          aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + (aBlazeApplicant.averageGrossIncomeInLast3M+ aBlazeApplicant.incomeDetails.mainIncome);
+        }
+      }
+    }
+  }
+  
+  //for condition 7
+  if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"salaried")then{
+    if(aBlazeApplicant.salaryReflectedInBankStatement <> unknown and aBlazeApplicant.salaryReflectedInBankStatementCertificate <> unknown )then{
+      if(aBlazeApplicant.salaryReflectedInBankStatement=aBlazeApplicant.salaryReflectedInBankStatementCertificate)then{
+        if(aBlazeApplicant.averageGrossIncomeInLast3M <> unknown)then{
+          aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome +(0.75 * (aBlazeApplicant.averageGrossIncomeInLast3M + aBlazeApplicant.incomeDetails.mainIncome));
+        }
+      }
+    }
+  }
+  
+  //for condition 8 
+  
+  if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)("salaryPaidInCash" or "salaryCertificate"))then{
+     aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + 0.75 * (aBlazeApplicant.incomeDetails.mainIncome);
+    
+  }
+  
+  //for condition 9
+  if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case )"salaryPaidInCash" and aBlazeApplicant.isDocumentProofCheck=false)then{
+     aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + 0.75 * (aBlazeApplicant.incomeDetails.mainIncome);
+  }
+  
+  //for condition 10 
+ // if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case )"salaried" and BTCommonVar.blazeApplication.variantType=EnumVariantType.ASSESSED)then{
+   // if(aBlazeApplicant.incomeDetails.monthlyIncome <> unknown)then{
+     
+     // aBlazeApplicant.salaryIncome15Day = 0.5 *(aBlazeApplicant.incomeDetails.monthlyIncome);
+   // }
+ // }
+
+
+//for condition 11
+  
+//  if(aBlazeApplicant.incomeDetails.incomeType=("salariedPaidInCash")and aBlazeApplicant.employmentDetails.pfDeductedFlag=EnumFlag.YES)then{
+ //   aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + aBlazeApplicant.incomeDetails.totalIncome - BTCommonVar.application;
+//  }
+  
+  //for Condition 12
+  if(aBlazeApplicant.incomeDetails.incomeType is equal to (ignoring case)"RentalIncome")then{
+     aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome +  (aBlazeApplicant.incomeDetails.mainIncome);
+  }
+  
+  //for Condition 13
+   if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"milkBussinessIncome" and aBlazeApplicant.businessVintage >3 and aBlazeApplicant.businessVintage<5)then{
+     aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + 0.75 * (aBlazeApplicant.incomeDetails.mainIncome);
+  }
+  
+  
+  if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"milkBussinessIncome" and aBlazeApplicant.businessVintage>5 and aBlazeApplicant.isDocumentProofCheck is equal to true)then{
+     aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome +  (aBlazeApplicant.incomeDetails.mainIncome);
+  }
+  
+  //for Condition 14 
+  if(aBlazeApplicant.incomeDetails.incomeType=(ignoring case)"agriculturalBusinessSeasonalIncome" and aBlazeApplicant.businessVintage=0.66 and aBlazeApplicant.individualType=(ignoring case)"member")then{
+  // aBlazeApplicant.incomeFactorIMGPerc=0.5 *(aBlazeApplicant.incomeDetails.totalIncome * 0.66);
+  aBlazeApplicant.incomeDetails.totalIncome=aBlazeApplicant.incomeDetails.totalIncome + aBlazeApplicant.incomeDetails.mainIncome + 0.5 * (aBlazeApplicant.incomeDetails.totalIncome * 0.66);
+  }
+  
+  
+]]></value>
+ </instance>
+ <instance ref='CommentsVH'>
+  <value></value>
+ </instance>
+ <instance ref='FunctionParametersVH'>
+  <instance-list ref='ParametersVH'>
+   <item template='DRNZKQyw5rcjBd4Yxo6FN649lWN.template1' id='FDGA6H'>
+    <instance ref='ParameterNameVH'>
+     <value>aBlazeApplicant</value>
+    </instance>
+    <instance ref='ParameterTypeVH'>
+     <value>BlazeApplicant</value>
+    </instance>
+   </item>
+  </instance-list>
+ </instance>
+</instantiation>

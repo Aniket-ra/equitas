@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'DTAB_ELAP_EmploybilityType')
+#Sat Sep 30 15:38:16 IST 2023
+innovatorItemCreationId=admin
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=DTAB_ELAP_EmploybilityType
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=XipRYIozEQALJ3wHpLw31zSuXjR
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

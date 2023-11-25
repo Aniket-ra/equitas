@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'DTAB_EHL_BusinessProofType')
+#Wed Oct 04 17:10:17 IST 2023
+innovatorItemCreationId=admin
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=DTAB_EHL_BusinessProofType
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=6f4M3hi1vZqP7gYFs6TMKHvnKb9
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

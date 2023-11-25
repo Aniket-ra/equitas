@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='5nrT9calkTxODnluALdD788RpOy' name='Mortgage_Decision_Flow'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+ </instance>
+ <instance ref='GDFPropertiesVH'>
+  <instance ref='instanceName'>
+   <value></value>
+  </instance>
+  <instance ref='FlowCommentsVH'>
+   <value></value>
+  </instance>
+  <instance ref='FlowStartEventClassVH'>
+   <value>Message</value>
+  </instance>
+  <instance ref='FlowStartEventObjectVH'>
+   <value>message</value>
+  </instance>
+  <instance-list ref='FlowVariablesVH'>
+   <item template='5nrT9calkTxODnluALdD788RpOy.template21' id='AbOurl'>
+    <instance ref='FlowVariableTypeVH'>
+     <value>Message</value>
+    </instance>
+    <instance ref='FlowVariableCommentsVH'>
+     <value></value>
+    </instance>
+    <instance-selection ref='FlowVariableInitialValueVH'>
+     <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='9mSgXA'>
+      <instance ref='value'>
+       <value>BTCommonVar</value>
+      </instance>
+     </item>
+    </instance-selection>
+    <instance ref='FlowVariableNameVH'>
+     <value>message</value>
+    </instance>
+   </item>
+  </instance-list>
+  <instance ref='FlowNameVH'>
+   <value>Mortgage_Decision_Flow</value>
+  </instance>
+ </instance>
+ <instance-list ref='FlowElementsVH'>
+  <item template='5nrT9calkTxODnluALdD788RpOy.template25' id='YvUuSR'>
+   <instance ref='TaskImplementationVH'>
+    <value>fn_BusinessErrors(Message)</value>
+   </instance>
+   <instance ref='TaskImplementationParameterCountVH'>
+    <value></value>
+   </instance>
+   <instance ref='TaskImplementationTypeVH'>
+    <value></value>
+   </instance>
+   <instance-list ref='TaskArgumentsVH'>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template23' id='66A61c'>
+     <instance ref='ArgumentIndexVH'>
+      <value></value>
+     </instance>
+     <instance ref='ArgumentTypeVH'>
+      <value></value>
+     </instance>
+     <instance ref='ParameterName'>
+      <value></value>
+     </instance>
+     <instance-selection ref='ArgumentValueVH'>
+      <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='X72lwX'>
+       <instance ref='value'>
+        <value>message</value>
+       </instance>
+      </item>
+     </instance-selection>
+    </item>
+   </instance-list>
+   <instance ref='TaskReturnTypeVH'>
+    <value></value>
+   </instance>
+   <instance-selection ref='TaskReturnValueVH'>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='4SSDgf'>
+     <instance ref='value'>
+      <value></value>
+     </instance>
+    </item>
+   </instance-selection>
+   <instance ref='TaskCommentsVH'>
+    <value></value>
+   </instance>
+   <instance ref='TaskNameVH'>
+    <value>Business Errors</value>
+   </instance>
+  </item>
+  <item template='5nrT9calkTxODnluALdD788RpOy.template25' id='Bcq84F'>
+   <instance ref='TaskImplementationVH'>
+    <value>fn_Set_Default_Values()</value>
+   </instance>
+   <instance ref='TaskImplementationParameterCountVH'>
+    <value></value>
+   </instance>
+   <instance ref='TaskImplementationTypeVH'>
+    <value></value>
+   </instance>
+   <instance-list ref='TaskArgumentsVH'>
+   </instance-list>
+   <instance ref='TaskReturnTypeVH'>
+    <value></value>
+   </instance>
+   <instance-selection ref='TaskReturnValueVH'>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='UkHuX1'>
+     <instance ref='value'>
+      <value></value>
+     </instance>
+    </item>
+   </instance-selection>
+   <instance ref='TaskCommentsVH'>
+    <value></value>
+   </instance>
+   <instance ref='TaskNameVH'>
+    <value>Initialiser</value>
+   </instance>
+  </item>
+  <item template='5nrT9calkTxODnluALdD788RpOy.template25' id='Pw7MGB'>
+   <instance ref='TaskImplementationVH'>
+    <value>fn_Call_Masters()</value>
+   </instance>
+   <instance ref='TaskImplementationParameterCountVH'>
+    <value></value>
+   </instance>
+   <instance ref='TaskImplementationTypeVH'>
+    <value></value>
+   </instance>
+   <instance-list ref='TaskArgumentsVH'>
+   </instance-list>
+   <instance ref='TaskReturnTypeVH'>
+    <value></value>
+   </instance>
+   <instance-selection ref='TaskReturnValueVH'>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='V3f51j'>
+     <instance ref='value'>
+      <value></value>
+     </instance>
+    </item>
+   </instance-selection>
+   <instance ref='TaskCommentsVH'>
+    <value></value>
+   </instance>
+   <instance ref='TaskNameVH'>
+    <value>Master Derivations</value>
+   </instance>
+  </item>
+  <item template='5nrT9calkTxODnluALdD788RpOy.template25' id='E6LxnR'>
+   <instance ref='TaskImplementationVH'>
+    <value>fn_Applicant_Derivations(BlazeApplicant)</value>
+   </instance>
+   <instance ref='TaskImplementationParameterCountVH'>
+    <value></value>
+   </instance>
+   <instance ref='TaskImplementationTypeVH'>
+    <value></value>
+   </instance>
+   <instance-list ref='TaskArgumentsVH'>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template23' id='6AyFr8'>
+     <instance ref='ArgumentIndexVH'>
+      <value></value>
+     </instance>
+     <instance ref='ArgumentTypeVH'>
+      <value></value>
+     </instance>
+     <instance ref='ParameterName'>
+      <value></value>
+     </instance>
+     <instance-selection ref='ArgumentValueVH'>
+      <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='XqF8ai'>
+       <instance ref='value'>
+        <value>MainApplicant</value>
+       </instance>
+      </item>
+     </instance-selection>
+    </item>
+   </instance-list>
+   <instance ref='TaskReturnTypeVH'>
+    <value></value>
+   </instance>
+   <instance-selection ref='TaskReturnValueVH'>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='Oust8z'>
+     <instance ref='value'>
+      <value></value>
+     </instance>
+    </item>
+   </instance-selection>
+   <instance ref='TaskCommentsVH'>
+    <value></value>
+   </instance>
+   <instance ref='TaskNameVH'>
+    <value>Applicant Derivations</value>
+   </instance>
+  </item>
+  <item template='5nrT9calkTxODnluALdD788RpOy.template12' id='OkdrmZ'>
+   <instance ref='SplitCommentsVH'>
+    <value></value>
+   </instance>
+   <instance-list ref='BranchesVH'>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template13' id='XghQsB'>
+     <instance-list ref='BranchFlowElementsVH'>
+      <item template='5nrT9calkTxODnluALdD788RpOy.template25' id='LgvlBB'>
+       <instance ref='TaskImplementationVH'>
+        <value>fn_CallScoreCard()</value>
+       </instance>
+       <instance ref='TaskImplementationParameterCountVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskImplementationTypeVH'>
+        <value></value>
+       </instance>
+       <instance-list ref='TaskArgumentsVH'>
+       </instance-list>
+       <instance ref='TaskReturnTypeVH'>
+        <value></value>
+       </instance>
+       <instance-selection ref='TaskReturnValueVH'>
+        <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='JsI87N'>
+         <instance ref='value'>
+          <value></value>
+         </instance>
+        </item>
+       </instance-selection>
+       <instance ref='TaskCommentsVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskNameVH'>
+        <value>Call Scorecard</value>
+       </instance>
+      </item>
+     </instance-list>
+     <instance ref='BranchConditionVH'>
+      <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"EnumCallType","elements":[{"valueType":"EnumCallType","name":"callType","fqName":"BTCommonVar.callType","externalType":"com.act21.equitas.EnumCallType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumCallType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumCallType","elements":[{"valueType":"EnumCallType","instValue":"EnumCallType.SCORE_CARD","isEnum":true,"voType":"EnumCallType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+     </instance>
+    </item>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template13' id='18Vx8Z'>
+     <instance-list ref='BranchFlowElementsVH'>
+      <item template='5nrT9calkTxODnluALdD788RpOy.template25' id='KsOUzA'>
+       <instance ref='TaskImplementationVH'>
+        <value>check(BlazeApplicant)</value>
+       </instance>
+       <instance ref='TaskImplementationParameterCountVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskImplementationTypeVH'>
+        <value></value>
+       </instance>
+       <instance-list ref='TaskArgumentsVH'>
+        <item template='5nrT9calkTxODnluALdD788RpOy.template23' id='MqTEGk'>
+         <instance ref='ArgumentIndexVH'>
+          <value></value>
+         </instance>
+         <instance ref='ArgumentTypeVH'>
+          <value></value>
+         </instance>
+         <instance ref='ParameterName'>
+          <value></value>
+         </instance>
+         <instance-selection ref='ArgumentValueVH'>
+          <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='8dgkpi'>
+           <instance ref='value'>
+            <value>MainApplicant</value>
+           </instance>
+          </item>
+         </instance-selection>
+        </item>
+       </instance-list>
+       <instance ref='TaskReturnTypeVH'>
+        <value></value>
+       </instance>
+       <instance-selection ref='TaskReturnValueVH'>
+        <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='83q4KY'>
+         <instance ref='value'>
+          <value></value>
+         </instance>
+        </item>
+       </instance-selection>
+       <instance ref='TaskCommentsVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskNameVH'>
+        <value>Task1</value>
+       </instance>
+      </item>
+      <item template='5nrT9calkTxODnluALdD788RpOy.template25' id='PYjOGo'>
+       <instance ref='TaskImplementationVH'>
+        <value>fn_CallEligibility(Applicant)</value>
+       </instance>
+       <instance ref='TaskImplementationParameterCountVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskImplementationTypeVH'>
+        <value></value>
+       </instance>
+       <instance-list ref='TaskArgumentsVH'>
+        <item template='5nrT9calkTxODnluALdD788RpOy.template23' id='Nbt7BC'>
+         <instance ref='ArgumentIndexVH'>
+          <value></value>
+         </instance>
+         <instance ref='ArgumentTypeVH'>
+          <value></value>
+         </instance>
+         <instance ref='ParameterName'>
+          <value></value>
+         </instance>
+         <instance-selection ref='ArgumentValueVH'>
+          <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='DKTAX4'>
+           <instance ref='value'>
+            <value>MainApplicant</value>
+           </instance>
+          </item>
+         </instance-selection>
+        </item>
+       </instance-list>
+       <instance ref='TaskReturnTypeVH'>
+        <value></value>
+       </instance>
+       <instance-selection ref='TaskReturnValueVH'>
+        <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='665pP2'>
+         <instance ref='value'>
+          <value></value>
+         </instance>
+        </item>
+       </instance-selection>
+       <instance ref='TaskCommentsVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskNameVH'>
+        <value>Eligibility</value>
+       </instance>
+      </item>
+     </instance-list>
+     <instance ref='BranchConditionVH'>
+      <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"EnumCallType","elements":[{"valueType":"EnumCallType","name":"callType","fqName":"BTCommonVar.callType","externalType":"com.act21.equitas.EnumCallType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumCallType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumCallType","elements":[{"valueType":"EnumCallType","instValue":"EnumCallType.DISBURSEMENT_STAGE","isEnum":true,"voType":"EnumCallType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+     </instance>
+    </item>
+    <item template='5nrT9calkTxODnluALdD788RpOy.template13' id='92vj1Z'>
+     <instance-list ref='BranchFlowElementsVH'>
+      <item template='5nrT9calkTxODnluALdD788RpOy.template25' id='Q2XF6w'>
+       <instance ref='TaskImplementationVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskImplementationParameterCountVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskImplementationTypeVH'>
+        <value></value>
+       </instance>
+       <instance-list ref='TaskArgumentsVH'>
+       </instance-list>
+       <instance ref='TaskReturnTypeVH'>
+        <value></value>
+       </instance>
+       <instance-selection ref='TaskReturnValueVH'>
+        <item template='5nrT9calkTxODnluALdD788RpOy.template40' id='BeUH6I'>
+         <instance ref='value'>
+          <value></value>
+         </instance>
+        </item>
+       </instance-selection>
+       <instance ref='TaskCommentsVH'>
+        <value></value>
+       </instance>
+       <instance ref='TaskNameVH'>
+        <value>Deviations</value>
+       </instance>
+      </item>
+     </instance-list>
+     <instance ref='BranchConditionVH'>
+      <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"EnumCallType","elements":[{"valueType":"EnumCallType","name":"callType","fqName":"BTCommonVar.callType","externalType":"com.act21.equitas.EnumCallType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumCallType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumCallType","elements":[{"valueType":"EnumCallType","instValue":"EnumCallType.SANCTION_STAGE","isEnum":true,"voType":"EnumCallType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+     </instance>
+    </item>
+   </instance-list>
+   <instance ref='SplitNameVH'>
+    <value>CallTypeBasisPlit</value>
+   </instance>
+  </item>
+ </instance-list>
+ <instance ref='StylesheetVH'>
+ </instance>
+</instantiation>

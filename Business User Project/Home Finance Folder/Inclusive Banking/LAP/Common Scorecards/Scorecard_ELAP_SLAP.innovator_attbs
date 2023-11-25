@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'Scorecard_ELAP_SLAP')
+#Mon Oct 09 16:09:56 IST 2023
+innovatorName=Scorecard_ELAP_SLAP
+innovatorTemplateRef=KNeIPzI6e9AyE3AOoalz7GNjpJJ
+innovatorDisplayName=Scorecard_ELAP_SLAP
+innovatorLastModified=9/16/23, 2\:19 PM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=7hHYWiOtLXL6YQb06kKx8gudWuA
+innovatorLastModifiedUser=admin
+subType=Score Model
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

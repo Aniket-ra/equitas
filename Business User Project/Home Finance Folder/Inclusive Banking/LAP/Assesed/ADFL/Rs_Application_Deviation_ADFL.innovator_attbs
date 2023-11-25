@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'Rs_Application_Deviation_ADFL')
+#Mon Oct 02 02:15:19 IST 2023
+managementProperty.Test\ Case=
+innovatorItemCreationId=admin
+innovatorTemplateRef=QzixEYa1EHH8Jr6Fk8nhguBcZtu
+innovatorDisplayName=Rs_Application_Deviation_ADFL
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.locationVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=Uz8Wr2gN5fsIZR2ZE5m7f0ucutN
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

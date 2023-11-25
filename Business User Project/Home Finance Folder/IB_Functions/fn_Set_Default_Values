@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='Q8jH6kHdOYIZ1uG0WKXqvvejqv0' name='fn_Set_Default_Values'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='InstanceName'>
+  <value></value>
+ </instance>
+ <instance ref='UniqueInstanceNameVH'>
+  <value>fn_Set_Default_Values1</value>
+ </instance>
+ <instance ref='FunctionNameVH'>
+  <value>fn_Set_Default_Values</value>
+ </instance>
+ <instance ref='FunctionReturnType'>
+  <value>void</value>
+ </instance>
+ <instance ref='FunctionBodyVH'>
+  <value><![CDATA[print("Entering Funciton ++++> fn_Set_Default_Values");
+
+//  ------------------------------------------Applicant Level Variable Initialization-----------------------------
+
+
+for each BlazeApplicant in BTCommonVar.blazeApplication.blazeApplicantArray do{
+  
+  aBlazeApplicant is some BlazeApplicant initially it;
+  aBlazeApplicant.quarterlyIncentiveComponentL2Q =0;
+  aBlazeApplicant.monthlyIncentiveComponentL3M =0;
+  aBlazeApplicant.computedIncome =0;
+   aBlazeApplicant.isPropertyOwner=false;
+   aBlazeApplicant.businessStability=0;
+   aBlazeApplicant.nonRegularIncomeProfile=false;
+   aBlazeApplicant.isEmploybilityType=false;
+   aBlazeApplicant.factoringPercentage=0;
+   aBlazeApplicant.isRentalIncomeDoc=false;
+   aBlazeApplicant.rentalIncome=0;
+   aBlazeApplicant.isSepIncomeProof=false;
+   aBlazeApplicant.isSenpIncomeProof=false;
+   aBlazeApplicant.isSalariedIncomeProof=false;
+   aBlazeApplicant.isPropertyOwnerApplicant=false;
+  aBlazeApplicant.isRentalIncomeDocStatus=false;
+  aBlazeApplicant.computedIncome=0;
+  aBlazeApplicant.totalEmployementVinatgeWithProof=0;
+  aBlazeApplicant.currentEmployementVinatgeWithProof=0;
+  aBlazeApplicant.netSalaryPerMonth=0;
+  aBlazeApplicant.totalFarmingexperience=0;
+  aBlazeApplicant.threeMSalAvg=0;
+  aBlazeApplicant.isNonRegularIncomeProfile=false;
+  aBlazeApplicant.isRentalIncomeCheck=false;
+  aBlazeApplicant.farmingExperience=0;
+  aBlazeApplicant.isOccupationTypeCheck=false;
+  aBlazeApplicant.businessVintage=0;
+  aBlazeApplicant.IsMinQualificationCheckStatus=false;
+  aBlazeApplicant.businessVintageInCurrentOperatingRegion=0;
+  aBlazeApplicant.quarterlyIncentiveComponentL2Q=0;
+  aBlazeApplicant.monthlyIncentiveComponentL3M=0;
+  aBlazeApplicant.itrRefelectedIncomeL2Y=0;
+  aBlazeApplicant.isItrRefelectedIncomeL2Y=false;
+  aBlazeApplicant.netMonthlySalaryL3M=0;
+  aBlazeApplicant.pensionIncome=0;
+  aBlazeApplicant.otherIncome=0;
+  aBlazeApplicant.netIncomeInBankCredit=0;
+  aBlazeApplicant.averageGrossIncomeInLast3M=0;
+  aBlazeApplicant.salaryReflectedInBankStatement=0;
+  aBlazeApplicant.salaryReflectedInBankStatementCertificate=0;
+ // aBlazeApplicant.loanMaturityDate=;
+  aBlazeApplicant.incomeFactorIMGPerc=0;
+  aBlazeApplicant.currentBasic=0;
+  aBlazeApplicant.dearnessAllowance=0;
+  aBlazeApplicant.customerNetSalary=0;
+  aBlazeApplicant.salaryCreditInBank=0;
+  aBlazeApplicant.isQuaterlyIncentiveComponentLQ=false;
+  aBlazeApplicant.isBusinessVintageProofPresent=false;
+  aBlazeApplicant.pensionIncomeConsiderationDuration=0;
+  aBlazeApplicant.isMonthlyIncentiveComponent=false;
+  aBlazeApplicant.isEligibleRelation=false;
+  aBlazeApplicant.isHighestEarningApplicant=false;
+  aBlazeApplicant.investmentInciome=0;
+  aBlazeApplicant.salaryIncome15Day=0;
+  aBlazeApplicant.totalIncome=0;
+  aBlazeApplicant.isEligibleLoanAmount=false;
+  aBlazeApplicant.isEligibleLoanTenure=false;
+  aBlazeApplicant.isBusinessProofType=false;
+  aBlazeApplicant.avgQuarterlyIncentiveComponentL2Q=0;
+  aBlazeApplicant.totalInvestment=0;
+  aBlazeApplicant.hasPensionIncome =false;
+  aBlazeApplicant.hasRentalIncome =false;
+}
+
+//  ------------------------------------------Application Level Variable Initialization-----------------------------
+
+
+  BTCommonVar.blazeApplication.isMandatoryIdentityProofDocCheckStatus =false;
+  BTCommonVar.blazeApplication.isMandatoryAgeProofDocCheck=false;
+  BTCommonVar.blazeApplication.isMandatoryResidenceAddressProofDocCheck=false;
+  BTCommonVar.blazeApplication.isMandatoryIncomeDocCheck=false;
+  BTCommonVar.blazeApplication.isEndUseCheck=false;
+  BTCommonVar.blazeApplication.outstandingLoanAmount=0;
+  BTCommonVar.blazeApplication.scorecardCheck=false;
+  BTCommonVar.blazeApplication.deviationCheck=false;
+  BTCommonVar.blazeApplication.eligibilityCheck=false;
+  BTCommonVar.blazeApplication.isOccupationTypeCheck=false;
+  BTCommonVar.blazeApplication.isCollateralSubType=false;
+  BTCommonVar.blazeApplication.clubbedIncome=0;
+
+DTAB_IIR_FOIR_LTV();
+print("SUBPRODUCTCODE  : "BTCommonVar.blazeApplication.product.subProductCode);
+print("collateral usb type  : "BTCommonVar.blazeApplication.collateralDetails.collateralSubType);
+print("collateral usage type  : "BTCommonVar.blazeApplication.collateralDetails.collateralUsageType);
+print(" type of roofing  : "BTCommonVar.blazeApplication.collateralDetails.typeOfRoofing);
+BTCommonVar.blazeApplication.applicationDecision.offerDetail.ltv = DTAB_LTV_MATRIX_LAP(BTCommonVar.blazeApplication.collateralDetails.typeOfRoofing as a string);
+
+print("Exiting Funciton ++++> fn_Set_Default_Values");]]></value>
+ </instance>
+ <instance ref='CommentsVH'>
+  <value></value>
+ </instance>
+ <instance ref='FunctionParametersVH'>
+  <instance-list ref='ParametersVH'>
+  </instance-list>
+ </instance>
+</instantiation>

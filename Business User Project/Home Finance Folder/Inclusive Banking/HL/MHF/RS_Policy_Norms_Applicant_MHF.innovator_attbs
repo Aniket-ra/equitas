@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'RS_Policy_Norms_Applicant_MHF')
+#Fri Oct 06 15:23:46 IST 2023
+managementProperty.Test\ Case=
+innovatorItemCreationId=admin
+innovatorTemplateRef=QzixEYa1EHH8Jr6Fk8nhguBcZtu
+innovatorDisplayName=RS_Applicant_MHF
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.locationVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=WhLWAqRoCtPDjfhm3oynOyrb48c
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'Rs_Income_Norms_ASL')
+#Wed Oct 04 15:26:10 IST 2023
+managementProperty.Test\ Case=
+innovatorItemCreationId=admin
+innovatorTemplateRef=QzixEYa1EHH8Jr6Fk8nhguBcZtu
+innovatorDisplayName=Rs_Income_Norms_ASL
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.locationVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=GK6NmZ42NFEbL6YHG4vrH5QhTHJ
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

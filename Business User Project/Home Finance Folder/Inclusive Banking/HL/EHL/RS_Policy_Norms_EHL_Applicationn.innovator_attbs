@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'RS_Policy_Norms_EHL_Applicationn')
+#Wed Oct 04 13:15:01 IST 2023
+managementProperty.Test\ Case=
+innovatorTemplateRef=QzixEYa1EHH8Jr6Fk8nhguBcZtu
+innovatorDisplayName=RS_Policy_Norms_EHL_Application
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.locationVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=CeL1b0Suqc1DVBb2Uj5vAKKJDAA
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

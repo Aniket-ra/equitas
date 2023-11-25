@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'Common_func_BL_SME')
+#Mon Oct 02 03:07:08 IST 2023
+managementProperty.Test\ Case=
+innovatorItemCreationId=admin
+innovatorTemplateRef=Q8jH6kHdOYIZ1uG0WKXqvvejqv0
+innovatorDisplayName=Common_func_BL_SME
+type=SRL Function
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.locationVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=FbHlOW02YcdZYCyGsbg7tFD2fjn
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

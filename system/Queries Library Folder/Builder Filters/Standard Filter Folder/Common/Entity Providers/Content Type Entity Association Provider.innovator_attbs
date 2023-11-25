@@ -1,0 +1,18 @@
+#
+#Sun Sep 17 08:40:43 GMT 2023
+innovatorName=Content Type Entity Association Provider
+isSystemTemplate=true
+innovatorDisplayName=Content Type Entity Association Provider
+innovatorLastModified=6/11/23, 8\:36 AM
+type=Association
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference=
+target=Repository
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=BxB2p0wml6VlQdiPqd7Mcaphx0p
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Provider

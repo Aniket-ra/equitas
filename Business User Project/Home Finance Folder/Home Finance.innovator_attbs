@@ -1,0 +1,18 @@
+#Extended attributes for Eclipse file-based repository (directory: 'Home Finance')
+#Fri Oct 06 15:43:50 IST 2023
+innovatorName=Home Finance
+innovatorTemplateRef=ProjectEntityTemplate
+innovatorDisplayName=Mortgage
+innovatorLastModified=9/12/23, 9\:20 PM
+type=Project
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=Repository
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=IkqkvlH6htgUcyqt6r2v5QpU782
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Fixed

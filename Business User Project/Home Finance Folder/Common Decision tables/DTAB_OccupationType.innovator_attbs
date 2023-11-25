@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'DTAB_OccupationType')
+#Wed Oct 04 19:51:48 IST 2023
+innovatorItemCreationId=admin
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=DTAB_OccupationType
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=45om3lJQ1eysCSHOOXIoVkUkfrL
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

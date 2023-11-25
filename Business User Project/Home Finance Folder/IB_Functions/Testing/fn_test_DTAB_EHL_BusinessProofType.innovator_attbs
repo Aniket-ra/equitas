@@ -1,0 +1,21 @@
+#Extended attributes for Innovator file-based repository (directory: 'fn_test_DTAB_EHL_BusinessProofType')
+#Fri Sep 22 14:06:38 IST 2023
+managementProperty.Test\ Case=
+innovatorName=fn_test_DTAB_EHL_BusinessProofType
+innovatorTemplateRef=Q8jH6kHdOYIZ1uG0WKXqvvejqv0
+innovatorDisplayName=fn_test_DTAB_EHL_BusinessProofType
+innovatorLastModified=9/15/23, 5\:26 AM
+type=SRL Function
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=60nU4j0Lcc2N1Fene6rMA5Y7fOi
+innovatorLastModifiedUser=admin
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

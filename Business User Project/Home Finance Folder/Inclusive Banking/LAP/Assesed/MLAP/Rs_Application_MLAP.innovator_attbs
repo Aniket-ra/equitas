@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'Rs_Application_MLAP')
+#Tue Oct 03 06:16:19 IST 2023
+managementProperty.Test\ Case=
+innovatorItemCreationId=admin
+innovatorTemplateRef=QzixEYa1EHH8Jr6Fk8nhguBcZtu
+innovatorDisplayName=Rs_Application_MLAP
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.locationVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=HfaJAm9SFQyT6RRkkKwaH7lJ5Nl
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

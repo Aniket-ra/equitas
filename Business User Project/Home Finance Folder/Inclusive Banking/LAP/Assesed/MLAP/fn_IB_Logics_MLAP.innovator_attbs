@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'fn_IB_Logics_MLAP')
+#Mon Oct 09 15:25:40 IST 2023
+managementProperty.Test\ Case=
+innovatorTemplateRef=Q8jH6kHdOYIZ1uG0WKXqvvejqv0
+innovatorDisplayName=fn_IB_Logics_MLAP
+innovatorLastModified=8/28/23, 7\:00 PM
+type=SRL Function
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=Hctd6zmsmxjCce2UJibl8OQ3RFX
+innovatorLastModifiedUser=admin
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

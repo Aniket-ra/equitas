@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='QzixEYa1EHH8Jr6Fk8nhguBcZtu' name='RS_Applicant_MHF'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='styleSheet'>
+ </instance>
+ <instance ref='rulesetMetadata'>
+  <instance ref='instanceName'>
+   <value></value>
+  </instance>
+  <instance ref='UniqueInstanceNameVH'>
+   <value>RS_Policy_Norms_Applicant_MHF1</value>
+  </instance>
+  <instance ref='name'>
+   <value>RS_Applicant_MHF</value>
+  </instance>
+  <instance ref='comment'>
+   <value></value>
+  </instance>
+ </instance>
+ <instance ref='rulesetInitialization'>
+  <instance-list ref='newEntity'>
+   <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.New local entity template' id='Fg8qhw'>
+    <instance ref='styleSheet'>
+    </instance>
+    <instance ref='comment'>
+     <value></value>
+    </instance>
+    <instance ref='entity'>
+     <value>Variable</value>
+    </instance>
+    <instance ref='name'>
+     <value>uwCriteria</value>
+    </instance>
+    <instance ref='entitySrlType'>
+     <value>UWCriteria</value>
+    </instance>
+    <instance ref='entityTemplateList'>
+     <value>QzixEYa1EHH8Jr6Fk8nhguBcZtu.New variable</value>
+    </instance>
+    <instance-selection ref='entityTemplate'>
+     <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.New variable' id='3zcwlO'>
+      <instance ref='__ENTITY_PROPERTIES__VH__'>
+      </instance>
+      <instance ref='initialValue'>
+       <value></value>
+      </instance>
+     </item>
+    </instance-selection>
+   </item>
+  </instance-list>
+ </instance>
+ <instance ref='initializationRule'>
+  <instance ref='__ENTITY_PROPERTIES__VH__'>
+  </instance>
+  <instance ref='initializationAction'>
+   <value></value>
+  </instance>
+ </instance>
+ <instance-list ref='newRules'>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='FKtoxP'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_075</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"retirementAge","fqName":"aBlazeApplicant.employmentDetails.retirementAge","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"real","elements":[{"valueType":"integer","instValue":"70","__meta_klass":"LiteralOperand"},{"opValue":"-","__meta_klass":"Operator"},{"valueType":"real","name":"tenureInYears","fqName":"BTCommonVar.blazeApplication.tenureInYears","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.SALARIED","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_075","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='SZAY4A'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_076</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[],"subGroups":[{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"age","fqName":"aBlazeApplicant.age","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"real","elements":[{"valueType":"integer","instValue":"65","__meta_klass":"LiteralOperand"},{"opValue":"-","__meta_klass":"Operator"},{"valueType":"real","name":"tenureInYears","fqName":"BTCommonVar.blazeApplication.tenureInYears","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"disposeWhenEmpty":true,"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},{"exprs":[{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"hasPensionIncome","fqName":"aBlazeApplicant.hasPensionIncome","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"true","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"hasRentalIncome","fqName":"aBlazeApplicant.hasRentalIncome","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"true","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"disposeWhenEmpty":true,"subGroups":[],"operator":"or","__meta_klass":"ConditionGroup"}],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_076","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='JUeAwH'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>Policy_Norms_217</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"string","elements":[{"valueType":"string","name":"city","externalType":"string","ancestry":{"members":[{"name":"aBlazeApplicant"},{"name":"addressDetails","index":0},{"name":"city"}],"__meta_klass":"PA"},"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"string","__meta_klass":"Expr"},{"opValue":"is equal to ( ignoring case )","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"Maharastra","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"isValuationOfFlatCheckStatus","externalType":"boolean","ancestry":{"members":[{"name":"BTCommonVar"},{"name":"blazeApplication"},{"name":"propertyDetails","index":0},{"name":"isValuationOfFlatCheckStatus"}],"__meta_klass":"PA"},"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"false","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.hf.model.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"Policy_Norms_217","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.equitas.hf.model.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='4Ool2X'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_077</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"isPropertyOwner","fqName":"aBlazeApplicant.isPropertyOwner","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"true","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"age","fqName":"aBlazeApplicant.age","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"real","elements":[{"valueType":"integer","instValue":"80","__meta_klass":"LiteralOperand"},{"opValue":"-","__meta_klass":"Operator"},{"valueType":"real","name":"tenureInYears","fqName":"BTCommonVar.blazeApplication.tenureInYears","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_077","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='RlVOaY'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_074</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"age","fqName":"aBlazeApplicant.age","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"real","elements":[{"valueType":"integer","instValue":"70","__meta_klass":"LiteralOperand"},{"opValue":"-","__meta_klass":"Operator"},{"valueType":"real","name":"tenureInYears","fqName":"BTCommonVar.blazeApplication.tenureInYears","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[{"exprs":[{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.SELF_EMPLOYED_NON_PROFESSIONAL","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.SELF_EMPLOYED_PROFESSIONAL","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"disposeWhenEmpty":true,"subGroups":[],"operator":"or","__meta_klass":"ConditionGroup"}],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_074","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='TMeHyl'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_072</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"string","elements":[{"valueType":"string","name":"incomeType","fqName":"aBlazeApplicant.incomeDetails.incomeType","externalType":"string","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"string","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"CROP_BASED_CASH_AGRICULTURAL_INCOME","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"landHolding","externalType":"real","ancestry":{"members":[{"name":"BTCommonVar"},{"name":"blazeApplication"},{"name":"propertyDetails","index":0},{"name":"landHolding"}],"__meta_klass":"PA"},"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"10","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_072","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='H9egCT'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_073</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"isRentalIncomeDocStatus","fqName":"aBlazeApplicant.isRentalIncomeDocStatus","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"false","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"hasRentalIncome","fqName":"aBlazeApplicant.hasRentalIncome","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"true","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_073","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='XYGPaL'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>Policy_Norms_211</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"age","fqName":"aBlazeApplicant.age","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"18","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.hf.model.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"Policy_Norms_211","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.equitas.hf.model.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='IDltzm'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_069</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"age","fqName":"aBlazeApplicant.age","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"60","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"hasRentalIncome","fqName":"aBlazeApplicant.hasRentalIncome","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"true","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"loanAmount","fqName":"BTCommonVar.blazeApplication.product.loanAmount","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"300000","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_069","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.KNOCKOUT","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='RF7njc'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_070</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"age","fqName":"aBlazeApplicant.age","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"60","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"hasRentalIncome","fqName":"aBlazeApplicant.hasRentalIncome","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"true","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumApplicantType","elements":[{"valueType":"EnumApplicantType","name":"applicantType","fqName":"aBlazeApplicant.applicantType","externalType":"com.act21.pnbhfl.EnumApplicantType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.EnumApplicantType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumApplicantType","elements":[{"valueType":"EnumApplicantType","instValue":"EnumApplicantType.MAIN_APPLICANT","isEnum":true,"voType":"EnumApplicantType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_070","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='AgPJv7'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_071</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"string","elements":[{"valueType":"string","name":"incomeType","fqName":"aBlazeApplicant.incomeDetails.incomeType","externalType":"string","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"string","__meta_klass":"Expr"},{"opValue":"is equal to ( ignoring case )","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"MILK_BUSINESS_INCOME","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"businessVintage","fqName":"aBlazeApplicant.businessVintage","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"3","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_071","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='FFai5G'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>Policy_Norms_204</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"employmentStability","fqName":"aBlazeApplicant.employmentDetails.employmentStability","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"2","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.SALARIED","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.hf.model.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"Policy_Norms_204","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.equitas.hf.model.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='VQ99jf'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_067</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.DAILY_WAGES","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"loanAmount","fqName":"BTCommonVar.blazeApplication.product.loanAmount","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"50000","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"loanAmount","fqName":"BTCommonVar.blazeApplication.product.loanAmount","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"100000","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"disposeWhenEmpty":true,"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"}],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_067","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='RjslL3'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_068</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"factoringPercentage","fqName":"aBlazeApplicant.factoringPercentage","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"100","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"hasRentalIncome","fqName":"aBlazeApplicant.hasRentalIncome","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"true","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_068","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='2mAutL'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_066</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"string","elements":[{"valueType":"string","name":"individualType","fqName":"aBlazeApplicant.individualType","externalType":"string","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"string","__meta_klass":"Expr"},{"opValue":"is equal to ( ignoring case )","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"MEMBER","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"isNonRegularIncomeProfile","fqName":"aBlazeApplicant.isNonRegularIncomeProfile","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"false","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.NON_REGULAR_EARNER","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_066","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.equitas.hf.model.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='5OghHg'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_109</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"hasRentalIncome","fqName":"aBlazeApplicant.hasRentalIncome","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"true","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumApplicantType","elements":[{"valueType":"EnumApplicantType","name":"applicantType","fqName":"aBlazeApplicant.applicantType","externalType":"com.act21.equitas.EnumApplicantType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumApplicantType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumApplicantType","elements":[{"valueType":"EnumApplicantType","instValue":"EnumApplicantType.CO_APPLICANT","isEnum":true,"voType":"EnumApplicantType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumRelationship","elements":[{"valueType":"EnumRelationship","name":"relationshipWithApplicant","fqName":"aBlazeApplicant.relationshipWithApplicant","externalType":"com.act21.equitas.EnumRelationship","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumRelationship","__meta_klass":"Expr"},{"opValue":"is not equal to","__meta_klass":"Operator"},{"valueType":"EnumRelationship","elements":[{"valueType":"EnumRelationship","instValue":"EnumRelationship.SON","isEnum":true,"voType":"EnumRelationship","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumRelationship","elements":[{"valueType":"EnumRelationship","name":"relationshipWithApplicant","fqName":"aBlazeApplicant.relationshipWithApplicant","externalType":"com.act21.equitas.EnumRelationship","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumRelationship","__meta_klass":"Expr"},{"opValue":"is not equal to","__meta_klass":"Operator"},{"valueType":"EnumRelationship","elements":[{"valueType":"EnumRelationship","instValue":"EnumRelationship.DAUGHTER","isEnum":true,"voType":"EnumRelationship","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_109","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.equitas.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.equitas.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='KOfAq4'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_024</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"string","elements":[{"valueType":"string","name":"incomeType","fqName":"aBlazeApplicant.incomeDetails.incomeType","externalType":"string","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"string","__meta_klass":"Expr"},{"opValue":"is equal to ( ignoring case )","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"MILK_BUSINESS_INCOME","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"businessVintage","fqName":"aBlazeApplicant.businessVintage","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"3","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_024","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='YZKSkl'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>IncomeNorms_025</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"string","elements":[{"valueType":"string","name":"incomeType","fqName":"aBlazeApplicant.incomeDetails.incomeType","externalType":"string","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"string","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"agricultureBusinessSeasonalIncome","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"string","elements":[{"valueType":"string","name":"individualType","fqName":"aBlazeApplicant.individualType","externalType":"string","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"string","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"member","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"factoringPercentage","fqName":"aBlazeApplicant.factoringPercentage","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"50","__meta_klass":"LiteralOperand"},{"opValue":"*","__meta_klass":"Operator"},{"valueType":"integer","instValue":"125000","__meta_klass":"LiteralOperand"},{"opValue":"/","__meta_klass":"Operator"},{"valueType":"integer","instValue":"12","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"noOfYearsBusiness","fqName":"aBlazeApplicant.employmentDetails.noOfYearsBusiness","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than or equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"8","__meta_klass":"LiteralOperand"},{"opValue":"/","__meta_klass":"Operator"},{"valueType":"integer","instValue":"12","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"IncomeNorms_025","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.pnbhfl.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.pnbhfl.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.pnbhfl.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='Rl6ko0'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>Policy_Norms_203</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"businessStability","fqName":"aBlazeApplicant.businessStability","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"isDocumentProofCheck","fqName":"aBlazeApplicant.isDocumentProofCheck","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"false","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[{"exprs":[{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.SELF_EMPLOYED_PROFESSIONAL","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.SELF_EMPLOYED_NON_PROFESSIONAL","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"disposeWhenEmpty":true,"subGroups":[],"operator":"or","__meta_klass":"ConditionGroup"}],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.hf.model.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"Policy_Norms_203","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.equitas.hf.model.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='2ARoRE'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>Policy_Norms_212</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"age","fqName":"aBlazeApplicant.age","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is smaller than or equal to","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"21","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"boolean","elements":[{"valueType":"boolean","name":"isValidAgeCheckProofPresent","fqName":"aBlazeApplicant.documentDetails.isValidAgeCheckProofPresent","externalType":"boolean","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"boolean","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"boolean","elements":[{"valueType":"boolean","instValue":"false","voType":"boolean","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.hf.model.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"PolicyNorms_212","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.equitas.hf.model.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='BrZbq6'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>Policy_Norms_202</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"real","elements":[{"valueType":"real","name":"businessStability","fqName":"aBlazeApplicant.businessStability","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"real","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"integer","elements":[{"valueType":"integer","instValue":"3","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[{"exprs":[{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.SELF_EMPLOYED_PROFESSIONAL","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","name":"employmentType","fqName":"aBlazeApplicant.employmentDetails.employmentType","externalType":"com.act21.equitas.EnumEmploymentType","isEnum":true,"__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.EnumEmploymentType","__meta_klass":"Expr"},{"opValue":"is equal to","__meta_klass":"Operator"},{"valueType":"EnumEmploymentType","elements":[{"valueType":"EnumEmploymentType","instValue":"EnumEmploymentType.SELF_EMPLOYED_NON_PROFESSIONAL","isEnum":true,"voType":"EnumEmploymentType","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"disposeWhenEmpty":true,"subGroups":[],"operator":"or","__meta_klass":"ConditionGroup"}],"operator":"and","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"approvalLevel","fqName":"uwCriteria.approvalLevel","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"L5","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","name":"decision","fqName":"uwCriteria.decision","externalType":"com.act21.equitas.hf.model.EnumDecision","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumDecision","elements":[{"valueType":"EnumDecision","instValue":"EnumDecision.REFER","isEnum":true,"voType":"EnumDecision","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"string","elements":[{"valueType":"string","name":"ruleId","fqName":"uwCriteria.ruleId","externalType":"string","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"string","elements":[{"valueType":"string","instValue":"Policy_Norms_202","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","name":"ruleType","fqName":"uwCriteria.ruleType","externalType":"com.act21.equitas.hf.model.EnumRuleCategory","isEnum":true,"__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"EnumRuleCategory","elements":[{"valueType":"EnumRuleCategory","instValue":"EnumRuleCategory.DEVIATION","isEnum":true,"voType":"EnumRuleCategory","__meta_klass":"LiteralOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"},{"stmt":{"valueType":"void","name":"fn_appendUWCriteria","fqName":"fn_appendUWCriteria","externalType":"void","family":"function","params":[{"name":"","valueType":"UWCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","valueExpr":{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"com.act21.equitas.hf.model.UWCriteria","__meta_klass":"Expr"},"__meta_klass":"Parameter"}],"__meta_klass":"Functional"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+ </instance-list>
+ <instance ref='rulesetParameters'>
+  <instance-list ref='ParametersVH'>
+   <item template='DRNZKQyw5rcjBd4Yxo6FN649lWN.template1' id='5LR1jD'>
+    <instance ref='ParameterNameVH'>
+     <value>aBlazeApplicant</value>
+    </instance>
+    <instance ref='ParameterTypeVH'>
+     <value>BlazeApplicant</value>
+    </instance>
+   </item>
+  </instance-list>
+ </instance>
+ <instance ref='rulesetReturnType'>
+  <value>void</value>
+ </instance>
+</instantiation>

@@ -1,0 +1,18 @@
+#
+#Sun Sep 17 08:40:42 GMT 2023
+innovatorName=DTAB_ASL_ADFL_Segmentation
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=DTAB_ASL_ADFL_Segmentation
+innovatorLastModified=7/26/23, 11\:49 AM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=2mIyjs59JFcd5nOuifMPoaiZOiU
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

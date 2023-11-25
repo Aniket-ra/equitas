@@ -1,0 +1,18 @@
+#
+#Sun Sep 17 08:40:42 GMT 2023
+innovatorName=DTAB_AHF_GHF
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=DTAB_AHF_GHF
+innovatorLastModified=7/26/23, 11\:49 AM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=4JTpKRF97kjjdgxc99OkdQE6HPd
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

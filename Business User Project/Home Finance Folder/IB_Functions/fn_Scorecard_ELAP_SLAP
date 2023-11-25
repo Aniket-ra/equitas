@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='Q8jH6kHdOYIZ1uG0WKXqvvejqv0' name='fn_Scorecard_ELAP_SLAP'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='InstanceName'>
+  <value></value>
+ </instance>
+ <instance ref='UniqueInstanceNameVH'>
+  <value>fn_Scorecard_ELAP_SLAP1</value>
+ </instance>
+ <instance ref='FunctionNameVH'>
+  <value>fn_Scorecard_ELAP_SLAP</value>
+ </instance>
+ <instance ref='FunctionReturnType'>
+  <value>void</value>
+ </instance>
+ <instance ref='FunctionBodyVH'>
+  <value><![CDATA[print("");
+print("++++> Entering function :: fn_Scorecard_ELAP_SLAP");
+
+scoreCardDetailArray is some array of ScoreCardDetail initially an array of ScoreCardDetail; 
+  
+noOfDependents is an integer;
+noOfDependents =MainApplicant.noOfDependents;
+  
+mainAppAge is an integer;
+mainAppAge =math().floor(MainApplicant.age);
+
+
+distFromBranch is a integer initially math().floor(BTCommonVar.blazeApplication.collateralDetails.distanceFromBranch);
+
+
+//initialise this
+foir is a real initially 0;
+foir=BTCommonVar.blazeApplication.applicationDecision.offerDetail.foir;
+foirString is a string initially "";
+foirString = DTAB_FoirAndAmountBasedScore(BTCommonVar.blazeApplication.applicationDecision.offerDetail.loanAmount, foir);
+
+//initialise this also
+ltv is a real initially 0;
+
+propertyType is a string initially BTCommonVar.blazeApplication.propertyDetails[0].propertyType;
+
+ltvString is a string initially "";
+ltvString =DTAB_LtvPropertyBasedScore(ltv, propertyType);
+
+
+// Property Location
+propertylocation is a string initially "";
+propertylocation=BTCommonVar.blazeApplication.propertyDetails[0].propertyLocation;
+
+// Property Age
+propertyAge is a real;
+propertyAge=BTCommonVar.blazeApplication.propertyDetails[0].propertyAge;
+
+
+bureauScore is an integer;
+hasMoreThan30DpdinL12M is a string initially "NO";
+for each CreditBureauData in MainApplicant.creditBureauData do{
+	//if(it.bureauType = "CIBIL")then{
+		bureauScore =it.creditReport.scoreSegment.score as an integer;
+		if(it.creditReport.bureauCalculatedVariable.maxDPDL6M > 30)then{
+			hasMoreThan30DpdinL12M ="YES";
+		}
+	//}
+}
+
+overdueOrWriteOffSettledInL12m is an integer;
+overdueOrWriteOffSettledInL12m= MainApplicant.obligations[0].overdueOrWriteOffSettledInL12M;
+
+
+inwChqBouncesInL6mInclEmi is a real initially 0;
+scoreModelDecision is some NdScoreModelReturnInfo;
+
+scoreModelDecision =Scorecard_ELAP_SLAP(mainAppAge, noOfDependents, inwChqBouncesInL6mInclEmi, BTCommonVar.blazeApplication.tenureInYears, distFromBranch, foirString, ltvString, propertylocation, propertyType, propertyAge, bureauScore, overdueOrWriteOffSettledInL12m, hasMoreThan30DpdinL12M);
+
+scoreCardCharacteristicsArray is some array of ScoreCardCharacteristicsDetail initially an array of ScoreCardCharacteristicsDetail;
+
+if(scoreModelDecision<>null and scoreModelDecision<> unknown) then {
+        for each NdScoredCharacteristic in scoreModelDecision.scoredCharacteristics such that (it  <>  unknown)
+        do {
+          scoredCharacteristics  is  some  NdScoredCharacteristic  initially  it  as  a  NdScoredCharacteristic;
+          scoreCardCharacteristicsDetail is some ScoreCardCharacteristicsDetail initially a ScoreCardCharacteristicsDetail;
+          
+          //scoreCardCharacteristicsDetail.baselineScore = scoredCharacteristics.baselineScore as a string;
+          //scoreCardCharacteristicsDetail.binLabel = scoredCharacteristics.binLabel;
+          scoreCardCharacteristicsDetail.characteristicName = scoredCharacteristics.characteristicName;    
+          scoreCardCharacteristicsDetail.characteristicValue =  scoredCharacteristics.binLabel;
+          scoreCardCharacteristicsDetail.reasonCode = scoredCharacteristics.reasonCode as a string;
+          scoreCardCharacteristicsDetail.partialScore = scoredCharacteristics.partialScore as a string;
+          scoreCardCharacteristicsArray.append(scoreCardCharacteristicsDetail);
+        }
+        print("----> scoreCardCharacteristicsArray count :: " scoreCardCharacteristicsArray.count);
+		
+		        // scoreCardDetail
+        scoreCardDetail is some ScoreCardDetail initially a ScoreCardDetail;  
+        if(scoreCardCharacteristicsArray <> unknown and scoreCardCharacteristicsArray <> null) then {
+          scoreCardDetail.scoreCardCharacteristics = scoreCardCharacteristicsArray as a fixed array of ScoreCardCharacteristicsDetail;
+        }
+        scoreCardDetail.scorecardName = scoreModelDecision.scoreModelName;
+        scoreCardDetail.totalScore = scoreModelDecision.score;
+        scoreCardDetail.characteristicCount = scoreModelDecision.characteristicCount;
+        scoreCardDetailArray.append(scoreCardDetail); 
+}
+BTCommonVar.blazeApplication.applicationDecision.scoreCardDetail =scoreCardDetailArray as a fixed array of ScoreCardDetail;
+
+print("++++> Exiting function :: fn_Scorecard_ELAP_SLAP");
+print("");]]></value>
+ </instance>
+ <instance ref='CommentsVH'>
+  <value></value>
+ </instance>
+ <instance ref='FunctionParametersVH'>
+  <instance-list ref='ParametersVH'>
+  </instance-list>
+ </instance>
+</instantiation>

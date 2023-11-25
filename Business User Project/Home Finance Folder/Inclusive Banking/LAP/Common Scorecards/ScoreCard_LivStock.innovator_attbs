@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'ScoreCard_LivStock')
+#Mon Oct 09 16:01:38 IST 2023
+innovatorName=ScoreCard_LivStock
+innovatorTemplateRef=KNeIPzI6e9AyE3AOoalz7GNjpJJ
+innovatorDisplayName=ScoreCard_LivStock
+innovatorLastModified=9/16/23, 2\:19 PM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=FRQ6VIcqt32wLe7l63MpPy7npx6
+innovatorLastModifiedUser=admin
+subType=Score Model
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

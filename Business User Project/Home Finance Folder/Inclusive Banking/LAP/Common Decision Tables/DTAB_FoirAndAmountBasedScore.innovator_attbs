@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'DTAB_FoirAndAmountBasedScore')
+#Fri Oct 06 12:38:46 IST 2023
+innovatorName=DTAB_FoirAndAmountBasedScore
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=DTAB_FoirAndAmountBasedScore
+innovatorLastModified=7/26/23, 11\:49 AM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=YkVq1AQvJsxpy4ev88zsDPMRMv5
+innovatorLastModifiedUser=admin
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

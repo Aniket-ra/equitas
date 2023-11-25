@@ -1,0 +1,20 @@
+#Extended attributes for Innovator file-based repository (directory: 'fn_IB_Logics_ADFL')
+#Mon Oct 09 15:55:38 IST 2023
+managementProperty.Test\ Case=
+innovatorItemCreationId=admin
+innovatorTemplateRef=Q8jH6kHdOYIZ1uG0WKXqvvejqv0
+innovatorDisplayName=fn_IB_Logics_ADFL
+type=SRL Function
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.locationVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+innovatorLastModifiedUser=admin
+guid=KKt6pXTiJLn3OEukJfGE1R35HPY
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

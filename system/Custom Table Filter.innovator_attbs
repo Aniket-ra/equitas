@@ -1,0 +1,18 @@
+#
+#Sun Sep 17 08:40:45 GMT 2023
+innovatorName=Custom Table Filter
+innovatorTemplateRef=ProjectEntityTemplate
+isSystemTemplate=true
+innovatorDisplayName=Custom Table Filter
+innovatorLastModified=6/11/23, 8\:36 AM
+type=Project
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=Repository
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=YqKjzcpKH1rPWDq4VR4znYTvLLv
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Fixed

@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'Scorecard_ASL_ADFL_ Assessed')
+#Mon Oct 09 12:57:02 IST 2023
+innovatorName=Scorecard_ASL_ADFL_ Assessed
+innovatorTemplateRef=KNeIPzI6e9AyE3AOoalz7GNjpJJ
+innovatorDisplayName=Scorecard_ASL_ADFL_ Assessed
+innovatorLastModified=9/16/23, 2\:18 PM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=Fo3NfVxqT3xJ1UzHyU0HuRJrkrK
+innovatorLastModifiedUser=admin
+subType=Score Model
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

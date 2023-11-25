@@ -1,0 +1,16 @@
+#Extended attributes for Innovator file-based repository (directory: 'DTAB_LTV_MATRIX_LVS')
+#Fri Oct 06 16:47:53 IST 2023
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=DTAB_LTV_MATRIX_LVS
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=Udi8ETEKzgdroIDvSehTXS5qgtr
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

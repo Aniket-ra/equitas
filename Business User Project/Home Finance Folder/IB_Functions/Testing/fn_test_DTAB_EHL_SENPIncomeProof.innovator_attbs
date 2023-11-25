@@ -1,0 +1,21 @@
+#Extended attributes for Innovator file-based repository (directory: 'fn_test_DTAB_EHL_SENPIncomeProof')
+#Fri Sep 22 14:07:08 IST 2023
+managementProperty.Test\ Case=
+innovatorName=fn_test_DTAB_EHL_SENPIncomeProof
+innovatorTemplateRef=Q8jH6kHdOYIZ1uG0WKXqvvejqv0
+innovatorDisplayName=fn_test_DTAB_EHL_SENPIncomeProof
+innovatorLastModified=9/14/23, 6\:36 AM
+type=SRL Function
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=LGXV1QS2JxMfwsUASOAa9jiyOCh
+innovatorLastModifiedUser=admin
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

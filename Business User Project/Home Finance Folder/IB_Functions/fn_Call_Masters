@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='Q8jH6kHdOYIZ1uG0WKXqvvejqv0' name='fn_Call_Masters'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='InstanceName'>
+  <value></value>
+ </instance>
+ <instance ref='UniqueInstanceNameVH'>
+  <value>fn_Call_Masters1</value>
+ </instance>
+ <instance ref='FunctionNameVH'>
+  <value>fn_Call_Masters</value>
+ </instance>
+ <instance ref='FunctionReturnType'>
+  <value>void</value>
+ </instance>
+ <instance ref='FunctionBodyVH'>
+  <value><![CDATA[print("");
+print("++++> Entering fn_Call_Masters");
+print("BTCommonVar.blazeApplication.endUse ::"BTCommonVar.blazeApplication.endUse);
+//Calling BL_Declared Masters
+if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.BL_DECLARED)then{
+  
+}
+
+//Entering Applicant Loop
+for each BlazeApplicant in BTCommonVar.blazeApplication.blazeApplicantArray such that(it<>null) do{
+  aBlazeApplicant is some BlazeApplicant initially it as a BlazeApplicant;
+  
+  BTCommonVar.blazeApplication.applicationDecision.offerDetail.ltv=DTAB_LTV_MATRIX_LAP(BTCommonVar.blazeApplication.collateralDetails.typeOfRoofing as a string  );
+  //Calling BL_Declared Masters
+  if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.BL_DECLARED)then{
+    
+//	aBlazeApplicant.adjFOIR =BL_DeclaredFOIR(aBlazeApplicant.incomeDetails.mainIncome, aBlazeApplicant);
+   aBlazeApplicant.isEligibleLoanAmount = DTAB_loanAmount_BL_Declared(BTCommonVar.blazeApplication.product.loanAmount, aBlazeApplicant.incomeDetails.incomeProgram);
+    aBlazeApplicant.isEligibleLoanTenure = DTAB_loanTenure_BL_Declared(aBlazeApplicant);
+      BTCommonVar.blazeApplication.applicationDecision.offerDetail.ltv  =  Dtab_bl_Declaredltv(aBlazeApplicant);
+    DTAB_Mandatory_Occupation_BL_Declared(aBlazeApplicant);
+    
+      // BTCommonVar.blazeApplication.applicationDecision.offerDetail.ltv= BLDeclared_LTV(aBlazeApplicant,BTCommonVar.blazeApplication.propertyDetails[0].propertyTypeName);
+    // aBlazeApplicant.isOccupationTypeCheck=DTAB_OccupationType("", aBlazeApplicant.employmentDetails.occupationType);
+    aBlazeApplicant.incomeDetails.monthlyIncome[0].income=DTAB_MinIncome_BL_Declared(aBlazeApplicant.incomeDetails.incomeType,aBlazeApplicant.incomeDetails.incomeProgram);
+      aBlazeApplicant.financialDetails.currentYearFinancialDetails.turnover=DTAB_MinTurnover_BL_Declared(aBlazeApplicant.incomeDetails.incomeProgram,BTCommonVar.blazeApplication.product.loanAmount);
+    aBlazeApplicant.isDocumentProofCheck=DTAB_DocList_BL_Dec(aBlazeApplicant);
+    
+  }
+// BTCommonVar.application.applicantDetails[].
+    //Calling ELAP Masters
+  if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.ELAP)then{
+	DTAB_ELAP_SENPIncomeProof(aBlazeApplicant.documentDetails.senpIncomeProofType as a string, aBlazeApplicant);
+    aBlazeApplicant.isEmploybilityType=DTAB_ELAP_EmploybilityType(aBlazeApplicant.employmentDetails.employbilityType);
+    aBlazeApplicant.isSalariedIncomeProof = DTAB_ELAP_SalariedIncomeProof(aBlazeApplicant);
+   aBlazeApplicant.isSepIncomeProof = DTAB_ELAP_SEPIncomeProof(aBlazeApplicant);
+  aBlazeApplicant.isOccupationTypeCheck  = DTAB_ELAP_OccupationType(aBlazeApplicant.employmentDetails.occupationType);
+   aBlazeApplicant.isBusinessProofType = DTAB_ELAP_BusinessProofType(aBlazeApplicant);
+    
+  
+  }
+  
+    //Calling MLAP Masters
+  if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.MLAP)then{
+	 aBlazeApplicant.isRentalIncomeDoc =  DTAB_RentalIncome_Doc(aBlazeApplicant.documentDetails.rentalIncomeDocument as a string);
+     aBlazeApplicant.isNonRegularIncomeProfile = DTAB_NonRegular_Income(aBlazeApplicant.profile as a string);
+  }
+  
+   //Calling SLAP Masters
+  if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.SLAP)then{
+	
+    DTAB_Madatory_DOC_Proof(aBlazeApplicant);
+    aBlazeApplicant.isOccupationTypeCheck = DTAB_Mandatory_Occupation(aBlazeApplicant.employmentDetails.occupationType);
+    aBlazeApplicant.IsMinQualificationCheckStatus = DTAB_MandatoryQualification(aBlazeApplicant.qualification);
+     // Dtab_Neg_EmploybilityList_IB_SLAP(BTCommonVar.blazeApplication.propertyDetails[0].propertyType );
+ 
+    // BTCommonVar.blazeApplication.isCollateralSubType=DTAB_NegPropertyList_IB_SLAP(BTCommonVar.blazeApplication.collateralDetails.collateralSubType);
+        // BTCommonVar.blazeApplication.applicationDecision.offerDetail.ltv=DTAB_IB_SLAP_LTV(BTCommonVar.blazeApplication.propertyDetails[0].propertyType);
+        // BTCommonVar.blazeApplication.isCollateralSubType=DTAB_CollabSubTypeList_IB_SLAP();
+
+
+    
+  }
+  
+   //Calling LVS Masters
+  if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.LIVESTOCK)then{
+	BTCommonVar.blazeApplication.isCollateralSubType =DTAB_LVS_CollateralSubType(BTCommonVar.blazeApplication.collateralDetails.collateralSubtypeName, aBlazeApplicant.individualType);
+  }
+  
+     //Calling ASL Masters
+  if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.ASL)then{
+	//DTAB_ASL_ENDUSE(aBlazeApplicant);
+  }
+  
+    //Calling BL-Assessed Masters
+  if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.BL_ASSESSED)then{
+    loanAmountLocal is an integer initially math().truncate(BTCommonVar.blazeApplication.product.loanAmount);
+    applicantAge is an integer initially math().truncate(aBlazeApplicant.age);
+	aBlazeApplicant.isMedicalTestStatus = DTAB_MedicalTestCheck(loanAmountLocal, applicantAge);
+     aBlazeApplicant.isRentalIncomeDoc =  DTAB_RentalIncome_Doc(aBlazeApplicant.documentDetails.rentalIncomeDocument as a string);
+  }
+  
+ 
+  
+  //Calling AHF Masters 
+  if(BTCommonVar.blazeApplication.product.subProductCode=EnumSubProductCode.AHF)then{
+    // aBlazeApplicant.isOccupationTypeCheck=DTAB_Mand_Occupation_Salaried(aBlazeApplicant);
+        // aBlazeApplicant.isOccupationTypeCheck=DTAB_SEP_OCCUPATION(aBlazeApplicant);
+        // aBlazeApplicant.isOccupationTypeCheck=DTAB_AHF_OccupationType(aBlazeApplicant);
+      // aBlazeApplicant.isDocumentProofCheck=DTAB_Doclist_AHF(aBlazeApplicant);
+    // aBlazeApplicant.adjFOIR=DTAB_FOIR_AHF_SENP_SEP();
+    // aBlazeApplicant.adjFOIR=DTAB_FOIR_AHF_salaried();
+    if(aBlazeApplicant.employmentDetails.employmentType = EnumEmploymentType.SALARIED) then{
+	BTCommonVar.blazeApplication.applicationDecision.offerDetail.foir  = DTAB_FOIR_AHF_salaried();
+    }
+    
+     if(aBlazeApplicant.employmentDetails.employmentType = EnumEmploymentType.SELF_EMPLOYED_PROFESSIONAL or aBlazeApplicant.employmentDetails.employmentType = EnumEmploymentType.SELF_EMPLOYED_NON_PROFESSIONAL) then{
+       
+       BTCommonVar.blazeApplication.applicationDecision.offerDetail.foir = DTAB_FOIR_AHF_SENP_SEP();
+     }
+  }
+  
+  //Calling GHF Masters 
+//  if(BTCommonVar.blazeApplication.product.subProductCode=EnumSubProductCode.GHF)then{
+//    BTCommonVar.blazeApplication.applicationDecision.offerDetail.ltv=DTAB_LTV_Matrix_HL_GHF_1()
+//  }
+  
+  
+  // calling EHL Masters 
+//  if(BTCommonVar.blazeApplication.product.subProductCode=EnumSubProductCode.)
+  
+  
+  
+  //calling MHF Masters
+    if(BTCommonVar.blazeApplication.product.subProductCode =EnumSubProductCode.BL_DECLARED)then{
+      // aBlazeApplicant.isNonRegularIncomeProfile=DTAB_NonRegularIncome_MFH(aBlazeApplicant.profile as a string);
+    }
+
+  
+  
+}
+
+print("++++> Exiting fn_Call_Masters");
+print(""); ]]></value>
+ </instance>
+ <instance ref='CommentsVH'>
+  <value></value>
+ </instance>
+ <instance ref='FunctionParametersVH'>
+  <instance-list ref='ParametersVH'>
+  </instance-list>
+ </instance>
+</instantiation>

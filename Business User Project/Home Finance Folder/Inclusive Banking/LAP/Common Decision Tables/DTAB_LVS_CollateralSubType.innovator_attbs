@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'DTAB_LVS_CollateralSubType')
+#Wed Oct 11 12:49:29 IST 2023
+innovatorName=DTAB_LVS_CollateralSubType
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=DTAB_LVS_CollateralSubType
+innovatorLastModified=8/10/23, 6\:11 PM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=Ca8eLxglHrRwfLOlxgGT5JjYS0D
+innovatorLastModifiedUser=admin
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

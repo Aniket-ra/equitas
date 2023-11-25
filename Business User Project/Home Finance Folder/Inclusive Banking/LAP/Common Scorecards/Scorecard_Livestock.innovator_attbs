@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'Scorecard_Livestock')
+#Mon Oct 09 12:23:32 IST 2023
+innovatorName=Scorecard_Livestock
+innovatorTemplateRef=KNeIPzI6e9AyE3AOoalz7GNjpJJ
+innovatorDisplayName=ScoreCard_AHF_GHF
+innovatorLastModified=9/16/23, 2\:19 PM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=Q5MMSuP5oNsbFtHLHZXFzFR4SuS
+innovatorLastModifiedUser=admin
+subType=Score Model
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

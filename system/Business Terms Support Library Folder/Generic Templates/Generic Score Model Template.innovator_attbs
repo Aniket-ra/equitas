@@ -1,0 +1,17 @@
+#
+#Sun Sep 17 08:40:45 GMT 2023
+innovatorName=Generic Score Model Template
+innovatorDisplayName=Generic Score Model Template
+innovatorLastModified=6/11/23, 8\:36 AM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=KNeIPzI6e9AyE3AOoalz7GNjpJJ
+subType=Score Model
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Template

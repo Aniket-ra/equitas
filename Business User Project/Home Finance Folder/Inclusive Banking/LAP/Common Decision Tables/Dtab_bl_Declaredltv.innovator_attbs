@@ -1,0 +1,16 @@
+#Extended attributes for Innovator file-based repository (directory: 'Dtab_bl_Declaredltv')
+#Thu Sep 28 12:30:58 IST 2023
+innovatorTemplateRef=6wJBDnNMEpPfdP4wizmesDxkko8
+innovatorDisplayName=Dtab_bl_Declaredltv
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=V9o5hL3XkNVOQhrRQDA0V6D5cwR
+subType=Decision Table
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

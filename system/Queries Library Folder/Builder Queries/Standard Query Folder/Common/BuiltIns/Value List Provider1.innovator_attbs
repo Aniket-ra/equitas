@@ -1,0 +1,17 @@
+#
+#Sun Sep 17 08:40:44 GMT 2023
+innovatorName=Value List Provider1
+isSystemTemplate=true
+innovatorDisplayName=String Operator Provider
+innovatorLastModified=6/11/23, 8\:36 AM
+type=Value List
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=Repository
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=DJvi93JZhQolaIs5glrrjaYucnp
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Provider

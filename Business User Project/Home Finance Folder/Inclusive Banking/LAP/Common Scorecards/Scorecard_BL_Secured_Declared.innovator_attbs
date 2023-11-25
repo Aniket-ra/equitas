@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'Scorecard_BL_Secured_Declared')
+#Mon Oct 09 15:11:21 IST 2023
+innovatorName=Scorecard_BL_Secured_Declared
+innovatorTemplateRef=KNeIPzI6e9AyE3AOoalz7GNjpJJ
+innovatorDisplayName=Scorecard_BL_Secured_Declared
+innovatorLastModified=9/16/23, 2\:19 PM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=KGr7tcQlNji6LxL1NgP3EVCyQKy
+innovatorLastModifiedUser=admin
+subType=Score Model
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance

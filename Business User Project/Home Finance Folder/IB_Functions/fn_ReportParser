@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='Q8jH6kHdOYIZ1uG0WKXqvvejqv0' name='fn_ReportParser'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='InstanceName'>
+  <value></value>
+ </instance>
+ <instance ref='UniqueInstanceNameVH'>
+  <value>fn_ReportParser1</value>
+ </instance>
+ <instance ref='FunctionNameVH'>
+  <value>fn_ReportParser</value>
+ </instance>
+ <instance ref='FunctionReturnType'>
+  <value>void</value>
+ </instance>
+ <instance ref='FunctionBodyVH'>
+  <value><![CDATA[print("");
+print("++++> Entering function :: fn_BureauReportParser");
+
+
+
+
+
+errType is a string initially "";
+errId is a string initially "";
+errName is a string initially "";
+errAction is a string initially "";
+errCode is a string initially "";
+errText is a string initially "";
+
+try {
+
+    
+    for each BlazeApplicant in BTCommonVar.blazeApplication.blazeApplicantArray
+    do {
+      aBlazeApplicant is some BlazeApplicant initially it as a BlazeApplicant;
+
+    maxDpdOfApplicant is a real initially 0;
+        // ----------------------------------------------------- BlazeCreditBureauDataArray ---------------------------------------------------------------------------------------------------
+        //print("----> aBlazeApplicant.creditBureauReports.count :: " aBlazeApplicant.creditBureauData.creditReport);   
+        
+        reportCounter is a integer;
+        reportCounter = 0;
+        for each CreditBureauData in aBlazeApplicant.creditBureauData 
+        do{
+          if(reportCounter<1) then {
+            bureauData is some CreditBureauData initially a CreditBureauData;
+            creditReport is some CreditBureauData_CreditReport initially it.creditReport;
+            
+            print("----> creditReport :: " creditReport);      
+            if(creditReport is not unknown and creditReport is not null) then {
+              print("----> creditReport is not null :: " creditReport);
+              
+              			  //----------------------------------------INQUIRY_DATE----------------------------------------
+			  print("---->creditReport.Header.DateProcessed ::"creditReport.header.dateProcessed);
+			 print("---->creditReport.Header.DateProcessed ::"creditReport.header.dateProcessed);
+			
+              
+       
+              
+              //-------------------------------------------------------blazeAccountDetailsArray-------------------------------------------------------------
+             
+              print("*********************Inside Cibil bureau definition**************************");
+              print(" ");
+              for each CreditBureauData_CreditReport_Account in creditReport.account such that 
+              (creditReport.account <> unknown and creditReport.account.count > 0 )
+              do {
+                //-------------------------------------------------------BlazeAccountDetails----------------------------------------------------------
+                account is some CreditBureauData_CreditReport_Account initially it as a CreditBureauData_CreditReport_Account;
+             blazeAccountDetails is some BlazeAccountDetails initially a BlazeAccountDetails;
+                  
+                  // Initializing BlazePaymentHistory
+                  paymentHistoryStr is a string initially "";
+                  print("----> initial paymentHistoryStr ::  " paymentHistoryStr);
+                  if(it.paymentHistory1 is not unknown and it.paymentHistory1 is not equal to "") then {
+                    paymentHistoryStr = portable().concat(paymentHistoryStr, it.paymentHistory1);
+                    if(it.paymentHistory2 is not unknown and it.paymentHistory2 is not equal to "") then {
+                      paymentHistoryStr = portable().concat(paymentHistoryStr, it.paymentHistory2);
+                    }
+                    print("----> paymentHistoryStr ::  " paymentHistoryStr);
+                  }
+                  
+                 dateArr is some array of string initially an array of string;
+                  fix is a date initially it.paymentHistoryStartDate as a date;
+                  fixedDate is a date initially fix as a date;
+                  calendar().defaultDateFormat="yyyy-MM-dd".
+                  print("----> fixedDate ::  " fixedDate);
+                  dateArr = fixedDate.toString().split("-") as a array of string;
+                  
+                  stringArr is some fixed array of string.
+                  regex is some RegularExpression;
+                  regex = regularExpression("(?<=\\G.)");
+                  
+                  //stringArr = regex.split(paymentHistoryStr);
+                  // stringArr = regex.split(acNonsummary.PaymentHistory1);
+				  stringArr = regex.split(paymentHistoryStr);
+                  
+                  day is a string initially "01";
+                  print("----> DAY ::  " day);
+                  month is a string initially dateArr[1];
+                  print("----> Months ::  " month);
+                  year is a string initially dateArr[0];
+                  print("----> Year ::  " year); 
+                  
+                  
+                  //----------------------------------------- blazePaymentHistoryArray  Starts ------------------------------------------------------
+                  counter is a integer initially 0;
+                  payArrIndex is a integer initially 0;
+                  print("----> stringArr.count ::  " stringArr.count);
+                  blazePaymentHistoryTempArray is some array of BlazePaymentHistory initially an array of BlazePaymentHistory;
+                  for each string in stringArr such that (payArrIndex < stringArr.count-2 and it is known and it is not blank)
+                  do {
+                    //----------------------------------------- blazePaymentHistory  Starts -------------------------------------------
+                    blazePaymentHistoryObj is some BlazePaymentHistory initially a BlazePaymentHistory;
+                    print(" ");
+                    dateStr is a string initially year"-"month"-"day;          
+                    print("----> dateStr :: "dateStr);
+                    blazeDate is a date initially dateStr as a date;
+                    
+                    
+                    if(counter > 0) then 
+                    {
+                      print("----> counter ::  " counter);
+                      noMonths is a duration initially 1 month;
+                      noMonths = noMonths.multiply(counter);       
+                      print("----> noMonths ::  " noMonths);
+                      val is some Object initially noMonths as an Object;
+                      newDate is a date;
+                      newDate = blazeDate - noMonths.
+                      blazePaymentHistoryObj.paymentDate = newDate;
+                      calendar().defaultDateFormat = "yyyy-MM-dd";
+                      counter = counter + 1;
+                      print("----> newDate ::  " newDate);
+                    } else {
+                      print("----> counter ::  " counter);
+                      blazePaymentHistoryObj.paymentDate = blazeDate;
+                      counter = counter + 1;
+                      print("----> blazeDate --> "blazeDate);
+                    } 
+                    print("----> blazePaymentHistoryObj.paymentDate ::  " blazePaymentHistoryObj.paymentDate);
+                    
+                    
+                    blazePaymentHistoryObj.year = blazePaymentHistoryObj.paymentDate.year;
+                    print("----> blazePaymentHistoryObj.year ::  " blazePaymentHistoryObj.year);
+                    blazePaymentHistoryObj.months = blazePaymentHistoryObj.paymentDate.month;
+                    print("----> blazePaymentHistoryObj.months ::  " blazePaymentHistoryObj.months);
+                    
+                    payDateArr is some array of string initially an array of string;
+                    paymentDate is a date initially blazePaymentHistoryObj.paymentDate as a date;
+                    checkDate is a date initially paymentDate as a date;
+                    calendar().defaultDateFormat="yyyy-MM-dd".
+                    print("----> checkDate ::  " checkDate);
+                    payDateArr = checkDate.toString().split("-") as a array of string;
+                    
+                    payMonth is a string initially payDateArr[1];
+                    print("----> payMonth ::  " payMonth);
+                    
+                    paymentMonth is a integer initially Integer.valueOf(payMonth);
+                    blazePaymentHistoryObj.assetClassification = portable().concat(stringArr[payArrIndex], stringArr[payArrIndex+1]);
+                    blazePaymentHistoryObj.assetClassification = portable().concat(blazePaymentHistoryObj.assetClassification, stringArr[payArrIndex+2]);
+                    print("----> blazePaymentHistoryObj.assetClassification ::  " blazePaymentHistoryObj.assetClassification);
+                    //if(paymentMonth <= 9) then {            
+                    //  payArrIndex = payArrIndex + 6;
+                    //  print("----> payArrIndex for month value LE 9 ::  " payArrIndex);
+                    //} else if(paymentMonth > 9) then {            
+                    //  payArrIndex = payArrIndex + 7;
+                    //  print("----> payArrIndex for month value GT 9 ::  " payArrIndex);
+                    //}
+                    print("---->payArrIndex ::"payArrIndex);
+                    payArrIndex = payArrIndex + 3;
+                    
+                    //Calculate monthSinceCurrDate  
+                    
+                    
+                    //Calculate Days past due and assetClassification
+                    try {
+                      if(blazePaymentHistoryObj.assetClassification is not equal to null 
+                         and blazePaymentHistoryObj.assetClassification is not unknown 
+                         and blazePaymentHistoryObj.assetClassification is not equal to "") then {
+                        blazePaymentHistoryObj.daysPastDue = Integer.parseInt(blazePaymentHistoryObj.assetClassification);
+                      } else {
+                        print("----> assetClassification is null or empty");
+                      }
+                    } catch an Exception with {
+                      if(blazePaymentHistoryObj.assetClassification =  (ignoring case)"DBT" 
+                      or blazePaymentHistoryObj.assetClassification =  (ignoring case)"LSS"  ) then {
+                        blazePaymentHistoryObj.daysPastDue = 180;
+                      } else if(blazePaymentHistoryObj.assetClassification =  (ignoring case) "SUB" ) then {
+                        blazePaymentHistoryObj.daysPastDue = 90;
+                      } else if(blazePaymentHistoryObj.assetClassification = (ignoring case) "SMA" ) then {
+                        blazePaymentHistoryObj.daysPastDue = 60;
+                      } else if(blazePaymentHistoryObj.assetClassification =  (ignoring case) "STD" ) then {
+                        blazePaymentHistoryObj.daysPastDue = 0;
+                      } else{
+                        blazePaymentHistoryObj.daysPastDue = 0;
+                      }
+                  }
+                  print("----> blazePaymentHistoryObj.daysPastDue ::  " blazePaymentHistoryObj.daysPastDue);
+                  
+                  blazePaymentHistoryTempArray.append(blazePaymentHistoryObj);
+                }  
+              
+              
+              
+              
+                  if(blazePaymentHistoryTempArray is not equal to null and blazePaymentHistoryTempArray is not unknown) then {
+                  blazeAccountDetails.blazePaymentHistoryArray = blazePaymentHistoryTempArray;
+                } else {
+                  print("----> blazePaymentHistoryObj is null");
+                }
+              
+             
+					blazeAccountDetails.currentDate = creditReport.header.dateProcessed as a date;
+              print("blazeAccountDetails.currentDate"blazeAccountDetails.currentDate);
+              
+              monthCounterLocal is an integer initially 1;
+			  	if(blazeAccountDetails.currentDate is known and account.paymentHistoryStartDate is known)then{
+			monthCounterLocal =blazeAccountDetails.currentDate.subtractInMonths(account.paymentHistoryStartDate as a date).months;
+			monthCounterLocal=monthCounterLocal+1;
+   
+		}
+                maxDpd is  an integer initially 0; 
+ 			for each BlazePaymentHistory in  blazeAccountDetails.blazePaymentHistoryArray do{
+              maxDpd=math().max(maxDpd,it.daysPastDue);
+              
+            }
+              //BlazePaymentHistory End
+               maxDpdOfApplicant=math().max( maxDpdOfApplicant,  maxDpd );
+              
+                //----------------------------------------- CreditReport_Account  ends -------------------------------------------
+                
+   }
+            
+                //--------------------------------------------blazePaymentHistoryArray ends ------------------------------------------------------          
+                
+             
+              }
+			  reportCounter = reportCounter +1;
+            }
+            //------------------------------------------------- creditBureauData ends --------------------------------------------------------------------  
+          } 
+  
+       
+        
+      
+          
+         
+         
+         
+        }
+		 //-----------------------------------------------------------------BlazeApplicant ends ----------------------------------------------------------------------------------------------
+        
+           
+    
+   
+    
+  
+  
+  
+
+
+print("++++> Exiting function :: fn_BureauReportParser"); 
+print("");
+
+}catch an Exception with {
+   
+  print("\n***Exception :: \n>>@@@<<\n" evaluationException().toString()"\n>>@@@<<\n");  
+}]]></value>
+ </instance>
+ <instance ref='CommentsVH'>
+  <value></value>
+ </instance>
+ <instance ref='FunctionParametersVH'>
+  <instance-list ref='ParametersVH'>
+   <item template='DRNZKQyw5rcjBd4Yxo6FN649lWN.template1' id='YWvsTh'>
+    <instance ref='ParameterNameVH'>
+     <value>message</value>
+    </instance>
+    <instance ref='ParameterTypeVH'>
+     <value>Message</value>
+    </instance>
+   </item>
+  </instance-list>
+ </instance>
+</instantiation>

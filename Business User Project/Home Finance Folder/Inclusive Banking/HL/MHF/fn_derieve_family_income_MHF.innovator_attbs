@@ -1,0 +1,18 @@
+#Extended attributes for Innovator file-based repository (directory: 'fn_derieve_family_income_MHF')
+#Tue Oct 10 12:07:09 IST 2023
+managementProperty.Test\ Case=
+innovatorTemplateRef=Q8jH6kHdOYIZ1uG0WKXqvvejqv0
+innovatorDisplayName=fn_derieve_family_income_MHF
+type=SRL Function
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference.locationVH=
+target=SRL
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=NwuDaRkIB1xRqufPJhYlfOoz8UH
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+managementProperty.Test\ Role=None

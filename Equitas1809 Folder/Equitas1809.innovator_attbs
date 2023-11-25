@@ -1,0 +1,16 @@
+#Extended attributes for Eclipse file-based repository (directory: 'Equitas1809')
+#Mon Sep 18 11:53:54 IST 2023
+innovatorTemplateRef=ProjectEntityTemplate
+innovatorDisplayName=Equitas1809
+type=Project
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+target=Repository
+managementProperty.Predictive\ Model\ Type=NotApplicable
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=LEujREsofGW4ZqAMAb3pRwvvnje
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Fixed

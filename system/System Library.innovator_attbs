@@ -1,0 +1,15 @@
+#Extended attributes for Eclipse file-based repository (directory: 'System Library')
+#Sun Sep 17 14:14:13 IST 2023
+innovatorName=System Library
+innovatorTemplateRef=ProjectEntityTemplate
+isSystemTemplate=true
+innovatorDisplayName=System Library
+innovatorLastModified=6/11/23, 8\:36 AM
+type=Project
+innovatorShortDesc=
+innovatorItemType=Innovator instance
+target=Repository
+system.library.project.version=7.8.0.1
+guid=1ie0zOvN2aM1BaPfZLVRqRQ2p5N
+subType=None
+contentType=Fixed

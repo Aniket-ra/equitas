@@ -1,0 +1,18 @@
+#
+#Sun Sep 17 08:40:43 GMT 2023
+innovatorName=Verification SubType Value List Provider
+isSystemTemplate=true
+innovatorDisplayName=Verification SubType Value List Provider
+innovatorLastModified=6/11/23, 8\:36 AM
+type=Value List
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Source\ Reference=
+target=Repository
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=P4hyPNefJNimXPugMSCotnMUhcQ
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Provider

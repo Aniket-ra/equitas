@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='Q8jH6kHdOYIZ1uG0WKXqvvejqv0' name='fn_eligibility_Logic_LiveStock'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='InstanceName'>
+  <value></value>
+ </instance>
+ <instance ref='UniqueInstanceNameVH'>
+  <value>fn_eligibility_Logic_LiveStock1</value>
+ </instance>
+ <instance ref='FunctionNameVH'>
+  <value>fn_eligibility_Logic_LiveStock</value>
+ </instance>
+ <instance ref='FunctionReturnType'>
+  <value>void</value>
+ </instance>
+ <instance ref='FunctionBodyVH'>
+  <value><![CDATA[print("");
+print("------>entering Function :: fn_eligibility_livestock");
+
+LTV_Elig is a real initially 0;
+LTV_perc is a real initially BTCommonVar.blazeApplication.applicationDecision.offerDetail.ltv;
+LTV_Elig=(BTCommonVar.blazeApplication.propertyDetails[0].adjMarketValue * LTV_perc);
+
+cattle_Based_Elig is a real initially 0;
+maxLoanAmountPerCattle is a real initially 0;
+//maxLoanAmountPerCattle=BTCommonVar.blazeApplication.maxLoanAmountPerCattle;
+cattle_Based_Elig=aBlazeApplicant.applicantAdditionalDetails.agricultureDetails.noOfCattlesOwnedCount as a real * maxLoanAmountPerCattle;
+
+BTCommonVar.blazeApplication.finalLoanAmount=math().min(LTV_Elig,math().min(cattle_Based_Elig,BTCommonVar.blazeApplication.product.loanAmount) );
+
+print("exiting function ::fn_eligibility_livestock ");
+]]></value>
+ </instance>
+ <instance ref='CommentsVH'>
+  <value></value>
+ </instance>
+ <instance ref='FunctionParametersVH'>
+  <instance-list ref='ParametersVH'>
+   <item template='DRNZKQyw5rcjBd4Yxo6FN649lWN.template1' id='9xNFCW'>
+    <instance ref='ParameterNameVH'>
+     <value>aBlazeApplicant</value>
+    </instance>
+    <instance ref='ParameterTypeVH'>
+     <value>BlazeApplicant</value>
+    </instance>
+   </item>
+  </instance-list>
+ </instance>
+</instantiation>

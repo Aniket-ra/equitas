@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<instantiation xmlns='http://www.blazesoft.com/instantiation' template='QzixEYa1EHH8Jr6Fk8nhguBcZtu' name='RS_LiveStock_CattleRules'>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='1VBfZr8g32Q2FnSWcWO9txQWwEE' name='Instance' id='Instance'>
+ </instantiation>
+ <instantiation xmlns='http://www.blazesoft.com/instantiation' template='18uqQPJXnTmKrAiLEOVcQMUAFmD' name='Entry' id='Entry'>
+  <instance ref='Source Reference'>
+   <instance ref='value'>
+    <instance ref='locationVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryNameVH'>
+     <value></value>
+    </instance>
+    <instance ref='versionVH'>
+     <value></value>
+    </instance>
+    <instance ref='filterVH'>
+     <value></value>
+    </instance>
+    <instance ref='releaseDateVH'>
+     <value></value>
+    </instance>
+    <instance ref='repositoryAccessVH'>
+     <value></value>
+    </instance>
+   </instance>
+  </instance>
+  <instance ref='Predictive Model Type'>
+   <instance ref='value'>
+    <value>NotApplicable</value>
+   </instance>
+  </instance>
+ </instantiation>
+ <instance ref='__ENTITY_PROPERTIES__VH__'>
+  <instance ref='Test Role'>
+   <instance ref='value'>
+    <value>None</value>
+   </instance>
+  </instance>
+  <instance ref='Test Case'>
+   <instance ref='value'>
+    <value></value>
+   </instance>
+  </instance>
+ </instance>
+ <instance ref='styleSheet'>
+ </instance>
+ <instance ref='rulesetMetadata'>
+  <instance ref='instanceName'>
+   <value></value>
+  </instance>
+  <instance ref='UniqueInstanceNameVH'>
+   <value>RS_LiveStock_CattleRules1</value>
+  </instance>
+  <instance ref='name'>
+   <value>RS_LiveStock_CattleRules</value>
+  </instance>
+  <instance ref='comment'>
+   <value></value>
+  </instance>
+ </instance>
+ <instance ref='rulesetInitialization'>
+  <instance-list ref='newEntity'>
+   <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.New local entity template' id='5S5Nwg'>
+    <instance ref='styleSheet'>
+    </instance>
+    <instance ref='comment'>
+     <value></value>
+    </instance>
+    <instance ref='entity'>
+     <value>Variable</value>
+    </instance>
+    <instance ref='name'>
+     <value>uwCriteria</value>
+    </instance>
+    <instance ref='entitySrlType'>
+     <value>UWCriteria</value>
+    </instance>
+    <instance ref='entityTemplateList'>
+     <value>QzixEYa1EHH8Jr6Fk8nhguBcZtu.New variable</value>
+    </instance>
+    <instance-selection ref='entityTemplate'>
+     <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.New variable' id='McYENv'>
+      <instance ref='__ENTITY_PROPERTIES__VH__'>
+      </instance>
+      <instance ref='initialValue'>
+       <value></value>
+      </instance>
+     </item>
+    </instance-selection>
+   </item>
+  </instance-list>
+ </instance>
+ <instance ref='initializationRule'>
+  <instance ref='__ENTITY_PROPERTIES__VH__'>
+  </instance>
+  <instance ref='initializationAction'>
+   <value></value>
+  </instance>
+ </instance>
+ <instance-list ref='newRules'>
+  <item template='QzixEYa1EHH8Jr6Fk8nhguBcZtu.Generic Rule Template' id='AZe28t'>
+   <instance ref='__ENTITY_PROPERTIES__VH__'>
+   </instance>
+   <instance ref='name'>
+    <value>Policy_Norms_134</value>
+   </instance>
+   <instance ref='startDate'>
+    <value></value>
+   </instance>
+   <instance ref='endDate'>
+    <value></value>
+   </instance>
+   <instance ref='comment'>
+    <value></value>
+   </instance>
+   <instance ref='styleSheet'>
+   </instance>
+   <instance ref='ruleCondition'>
+    <value>{"rootGroup":{"exprs":[{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"cattleAge","fqName":"cattleDetail.cattleAge","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is smaller than","__meta_klass":"Operator"},{"valueType":"real","elements":[{"valueType":"integer","instValue":"3","__meta_klass":"LiteralOperand"},{"opValue":"+","__meta_klass":"Operator"},{"valueType":"real","name":"tenureInYears","fqName":"BTCommonVar.blazeApplication.tenureInYears","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"},{"valueType":"boolean","elements":[{"valueType":"integer","elements":[{"valueType":"integer","name":"cattleAge","fqName":"cattleDetail.cattleAge","externalType":"integer","__meta_klass":"PropertyOperand"}],"exprType":0,"externalType":"integer","__meta_klass":"Expr"},{"opValue":"is larger than","__meta_klass":"Operator"},{"valueType":"real","elements":[{"valueType":"integer","instValue":"12","__meta_klass":"LiteralOperand"},{"opValue":"+","__meta_klass":"Operator"},{"valueType":"real","name":"tenureInYears","fqName":"BTCommonVar.blazeApplication.tenureInYears","externalType":"real","__meta_klass":"PropertyOperand"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"CompExpr"}],"subGroups":[],"operator":"or","__meta_klass":"ConditionGroup"},"ctr":0,"isVisible":true,"__meta_klass":"ConditionBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+   <instance ref='ruleAction'>
+    <value>{"rootGroup":{"exprs":[{"stmt":{"elements":[{"valueType":"UWCriteria","name":"uwCriteria","fqName":"uwCriteria","externalType":"com.act21.equitas.UWCriteria","__meta_klass":"PropertyOperand"},{"opValue":"=","__meta_klass":"Operator"},{"valueType":"UWCriteria","elements":[{"valueType":"UWCriteria","__meta_klass":"NewInstance"}],"exprType":0,"__meta_klass":"Expr"}],"exprType":0,"__meta_klass":"AssignStmt"},"__meta_klass":"StmtExpr"}],"__meta_klass":"StmtGroup"},"ctr":0,"isVisible":true,"__meta_klass":"CodeBuilderViewModel","__meta_version":"3.0"}</value>
+   </instance>
+  </item>
+ </instance-list>
+ <instance ref='rulesetParameters'>
+  <instance-list ref='ParametersVH'>
+   <item template='DRNZKQyw5rcjBd4Yxo6FN649lWN.template1' id='GYaPGM'>
+    <instance ref='ParameterNameVH'>
+     <value>cattleDetail</value>
+    </instance>
+    <instance ref='ParameterTypeVH'>
+     <value>CattleDetails</value>
+    </instance>
+   </item>
+  </instance-list>
+ </instance>
+ <instance ref='rulesetReturnType'>
+  <value>void</value>
+ </instance>
+</instantiation>

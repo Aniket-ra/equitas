@@ -1,0 +1,24 @@
+#Extended attributes for Innovator file-based repository (directory: 'RS_Applicant_Dev_SLAP_ELAP')
+#Sat Sep 16 13:24:43 GMT 2023
+entryLastCheckInUser=Aman
+managementProperty.Test\ Case=
+innovatorItemCreationId=Anirudha
+innovatorName=RS_Applicant_Dev_SLAP_ELAP
+innovatorTemplateRef=QzixEYa1EHH8Jr6Fk8nhguBcZtu
+innovatorDisplayName=RS_Applicant_Dev_SLAP_ELAP
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=LRaquRQhuPfdyYpigVSCinjUXQk
+innovatorLastModifiedUser=Aman
+subType=None
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
+entryLastCheckInTime=9/12/23, 6\:13 PM
+innovatorItemVersionId=3
+managementProperty.Test\ Role=None

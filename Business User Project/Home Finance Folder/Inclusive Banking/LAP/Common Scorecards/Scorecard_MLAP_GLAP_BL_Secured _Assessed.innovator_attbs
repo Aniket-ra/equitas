@@ -1,0 +1,19 @@
+#Extended attributes for Innovator file-based repository (directory: 'Scorecard_MLAP_GLAP_BL_Secured _Assessed')
+#Mon Oct 09 16:04:26 IST 2023
+innovatorName=Scorecard_MLAP_GLAP_BL_Secured _Assessed
+innovatorTemplateRef=KNeIPzI6e9AyE3AOoalz7GNjpJJ
+innovatorDisplayName=Scorecard_MLAP_GLAP_BL_Secured _Assessed
+innovatorLastModified=9/16/23, 2\:20 PM
+type=SRL Ruleset
+managementProperty.Source\ Reference.versionVH=
+managementProperty.Source\ Reference.locationVH=
+managementProperty.Source\ Reference.releaseDateVH=
+managementProperty.Predictive\ Model\ Type=NotApplicable
+target=SRL
+managementProperty.Source\ Reference.repositoryNameVH=
+managementProperty.Source\ Reference.filterVH=
+guid=LBm7VPTfBjs2K3I6Ya2qRS0CzuC
+innovatorLastModifiedUser=admin
+subType=Score Model
+managementProperty.Source\ Reference.repositoryAccessVH=
+contentType=Instance
